@@ -39,3 +39,18 @@ def merge_intervals(intervals):
     merged.append([current_start, current_end])
     
     return merged
+
+def is_palindrome(s):
+    """
+    Checks if a string is a palindrome, ignoring case and spaces.
+    
+    Args:
+        s: Input string
+        
+    Returns:
+        True if the string is a palindrome, False otherwise
+    """
+    # Remove spaces and convert to lowercase
+    cleaned = ''.join(s.split()).lower()
+    # Check if cleaned string reads the same forwards and backwards
+    return cleaned == cleaned[::-1]
